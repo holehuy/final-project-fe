@@ -1,0 +1,121 @@
+//
+// Aside
+//
+
+// General mode(all devices)
+.aside {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF !important;
+  padding: 0;
+
+  // Aside menu
+  .aside-menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .menu {
+
+      // Menu item
+      >.menu-item {
+        >.menu-link {
+          padding: 20px 26px;
+
+          .icon-title {
+            color: #B9BBBD;
+          }
+
+          .menu-title {
+            margin-left: 18px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.231rem;
+            font-weight: 500;
+          }
+        }
+
+        &.menu-accordion {
+
+          &.show,
+          &.showing {
+            >.menu-link {
+              >.menu-icon {
+                .svg-icon {
+                  @include menu-link-arrow-rotate(90deg, -90deg);
+                }
+              }
+            }
+          }
+
+          &.hiding {
+            >.menu-link {
+              >.menu-icon {
+                .svg-icon {
+                  @include menu-link-arrow-rotate(0, 0);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // Link colors
+      .menu-item {
+        @include menu-link-default-state($title-color: $gray-700, $icon-color: $gray-600, $bullet-color: $gray-400, $arrow-color: $gray-400, $bg-color: transparent);
+        @include menu-link-hover-state($title-color: $gray-900, $icon-color: null, $bullet-color: null, $arrow-color: null, $bg-color: transparent);
+        @include menu-link-show-state($title-color: $gray-900, $icon-color: $gray-900, $bullet-color: $gray-900, $arrow-color: null, $bg-color: transparent);
+        @include menu-link-active-state($title-color: $gray-900, $icon-color: $gray-900, $bullet-color: $gray-900, $arrow-color: null, $bg-color: transparent);
+
+        >.menu-link.active {
+          background-color: $color-Topaz-light;
+          border-radius: 14px;
+
+          path {
+            fill: #00BAB4 !important;
+          }
+
+          .icon-title {
+            color: $color-Topaz;
+          }
+
+          .menu-title {
+            color: $color-Topaz;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Desktop mode
+@include media-breakpoint-up(lg) {
+  .aside {
+    position: fixed;
+    top: get($content-spacing, desktop);
+    bottom: get($content-spacing, desktop);
+    left: get($content-spacing, desktop);
+    z-index: get($aside-config, z-index);
+    overflow: hidden;
+    width: get($aside-config, width);
+    @include border-radius(get($aside-config, border-radius));
+
+    // Logo
+    .aside-logo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+// Tablet & mobile modes
+@include media-breakpoint-down(lg) {
+  .aside {
+    display: none;
+
+    // Logo
+    .aside-logo {
+      display: none;
+    }
+  }
+}

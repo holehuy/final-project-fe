@@ -1,0 +1,12 @@
+$image-url: '../images';
+
+.login-page {
+  background-image: url('#{$image-url}/background-login.png');
+  height: 100vh;
+}
+
+.auth-language-dropdown {
+  position: absolute;
+  top: 39px;
+  right: 67px;
+}

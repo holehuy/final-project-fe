@@ -1,0 +1,94 @@
+.upload-image {
+  margin-right: 20px;
+
+  &__section {
+    width: 100%;
+    height: 222px;
+    border: 1px solid #605E5C;
+    border-radius: 31px;
+  }
+
+  &--show {
+    border: none;
+  }
+
+  &__drag {
+    position: relative;
+    height: 188.36px;
+    margin: 16px;
+    border: 1px dashed #9A9AB0;
+    border-radius: 31px;
+
+    .icon-camera {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .upload-avatar {
+      border-radius: 31px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .icon-cancel {
+      cursor: pointer;
+      position: absolute;
+      right: -5px;
+      top: -5px;
+    }
+  }
+
+  &__show {
+    margin: 0;
+    height: 222px;
+    border: none;
+  }
+
+  &__text {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    color: #11142D;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.923rem;
+
+    p {
+      margin: 0;
+    }
+
+    .upload-link {
+      color: #1C7FF0;
+      text-decoration: underline;
+    }
+  }
+
+  &__button-upload {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .spinner-upload {
+      color: #00BAB4 !important;
+    }
+  }
+  .error-message {
+    text-align: center;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    font-size: .925rem;
+    color: #F1416C;
+  }
+  .border-error {
+    border: 1px solid #F1416C;
+  }
+}

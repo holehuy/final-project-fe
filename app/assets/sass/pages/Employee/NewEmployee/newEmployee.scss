@@ -1,0 +1,118 @@
+.new-employee {
+  margin-top: 70px;
+
+  .back-employee-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .icon-back {
+    margin-right: 10px;
+  }
+
+  .back-link {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.615rem;
+    font-weight: 500;
+    color: #00bab4;
+    text-decoration: underline;
+  }
+
+  &__form {
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    border-radius: 33px;
+    padding: 30px;
+    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 0px 4px 11px 0px #00000026;
+    }
+
+    .form-row {
+      margin-bottom: 24px;
+    }
+
+    .form-label {
+      color: #6e6b7b;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.231rem;
+      font-weight: 400;
+    }
+
+    .form-item {
+      padding-right: 58px;
+    }
+
+    .fetch-slack {
+      margin-top: 29px;
+    }
+    
+    .fetch-infor-slack {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon-slack {
+      margin-right: 10px;
+    }
+
+    .error-message {
+      width: 100%;
+      margin-top: 0.5rem;
+      font-size: 0.925rem;
+      color: #f1416c;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .button-create {
+      margin-right: 69px;
+    }
+  }
+
+  .phone-field-default {
+    label {
+      font-size: 1.231rem;
+      color: #6e6b7b;
+      margin-bottom: 5px;
+    }
+
+    .dropdown-country {
+      border-top-left-radius: 18px !important;
+      border-bottom-left-radius: 18px !important;
+      border: 1px solid #eceaf3 !important;
+      padding: 18px 24px !important;
+    }
+
+    .phone-input {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      color: #6e6b7b;
+      margin-left: 72px;
+      border-top-right-radius: 18px;
+      border-bottom-right-radius: 18px;
+      border: 1px solid #eceaf3;
+      padding: 18px 24px;
+      height: auto;
+      width: calc(100% - 72px);
+    }
+
+    .phone-error {
+      border: 1px solid #f1416c !important;
+    }
+
+    .country-list {
+      margin: 24px 0 10px -24px !important;
+    }
+  }
+}
